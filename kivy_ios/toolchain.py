@@ -173,7 +173,7 @@ class Arch:
         # with the preprocessor (aka CC -E) without CFLAGS, which fails for
         # cross compiled projects
         flags = " ".join([
-            "--sysroot", self.sysroot,
+            "-isysroot", self.sysroot,
             "-arch", self.arch,
             "-pipe", "-no-cpp-precomp",
         ])
