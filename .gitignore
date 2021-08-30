@@ -4,7 +4,6 @@
 *.swp
 freetype-*
 build/*
-dist/*
 src/SDL/Xcode-iPhoneOS/SDL/build/
 src/SDL/Xcode-iOS/SDL/build/
 tmp/*

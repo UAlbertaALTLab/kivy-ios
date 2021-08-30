@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function run_with_pipenv() {
+    CMD=()
+
+    if [ -z "${PIPENV_ACTIVE}" ]; then
+        CMD+=(pipenv run)
+    fi
+
+    CMD+=("${@}")
+
+    "${CMD[@]}"
+}
+
+DIR="$(dirname -- "${0}")"
+export PYTHONPATH="${DIR}:${PYTHONPATH}"
+
+run_with_pipenv "${DIR}/kivy_ios/toolchain.py" "${@}"
